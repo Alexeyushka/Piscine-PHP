@@ -8,12 +8,50 @@ body {
 .top_menu {
     width: 1420px;
     height: 136px;
-    margin-left: 240px;
+    margin-left: 235px;
     margin-right: 235px;
-    margin-top: 20px;
+    margin-top: 18px;
     background-color: #909090;
+    display: inline-block;
+    position: relative;
 }
 
 .top_image {
-    
+    height: 116px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: absolute;
+}
+
+.loupe {
+    width: 251px;
+    height: 140px;
+    margin-top: 15px;
+    margin-left: 1150px;
+}
+
+.left_menu {
+    width: 140px;
+    height: 265px;
+    margin-left: 265px;
+    background-color: #909090;
+    display: inline-block;
+    position: relative;
+}
+
+.center_image {
+    width: 1000px;
+    height: 560px;
+    margin-left: 180px;
+    display: inline-block;
+    position: relative;
+}
+
+.right_menu {
+    width: 140px;
+    height: 265px;
+    margin-left: 1080px;
+    background-color: #909090;
+    display: inline-block;
+    position: relative;
 }
