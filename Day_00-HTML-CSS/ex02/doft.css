@@ -1,0 +1,19 @@
+body {
+    min-width: 1890px;
+    min-height: 910px;
+    background-color: #505050;
+    margin: 0;
+}
+
+.top_menu {
+    width: 1420px;
+    height: 136px;
+    margin-left: 240px;
+    margin-right: 235px;
+    margin-top: 20px;
+    background-color: #909090;
+}
+
+.top_image {
+    
+}
