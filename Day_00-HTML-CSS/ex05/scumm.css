@@ -118,20 +118,68 @@ body {
     position: relative;
 }
 
-.link-chair {
-    width: 10%;
-    height: 10%;
+.link-us {
+    width: 70px;
+    height: 70px;
     position: absolute;
-    top: 60%;
-    right: 52%;
+    top: 20px;
+    left: 40px;
 }
 
-.link-screen {
-    width: 20%;
-    height: 20%;
+.link-nogti {
+    width: 70px;
+    height: 70px;
     position: absolute;
-    top: 57%;
-    right: 3%;
+    top: 100px;
+    left: 40px;
+}
+
+.link-oko {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 180px;
+    left: 40px;
+}
+
+.link-serp {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 260px;
+    left: 40px;
+}
+
+.link-trash {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 330px;
+    left: 40px;
+}
+
+.link-book {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 20px;
+    left: 40px;
+}
+
+.link-tryapka {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 100px;
+    left: 40px;
+}
+
+.link-wall {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 180px;
+    left: 40px;
 }
 
 .left_menu {
@@ -158,6 +206,7 @@ body {
     height: 425px;
     background-color: #909090;
     margin-left: 1220px;
+    margin-top: 0px;
     border-radius: 10px;
     box-shadow: 10px 10px 12px 2px rgba(0,0,0,0.75);
     position: absolute;
@@ -166,7 +215,7 @@ body {
 .window {
     background-color: rgb(134,255,152);
     width: 520px;
-    height: 160px;
+    height: 170px;
     padding: 20px 10px;
     border-radius: 10px;
     box-shadow: 10px 10px 12px 2px rgba(0,0,0,0.75);
@@ -174,6 +223,11 @@ body {
     font-style: courier;
     top: 680px;
     left: 190px;
+}
+
+.button {
+    height: 30px;
+    width: 100px;
 }
 
 .bold {
@@ -187,4 +241,17 @@ body {
 
 .window input {
     width: 380px;
+}
+
+#window {
+    background-color: rgb(134,255,152);
+    width: 520px;
+    height: 250px;
+    padding: 20px 10px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 12px 2px rgba(0,0,0,0.75);
+    position: absolute;
+    font-style: courier;
+    top: 680px;
+    left: 190px;
 }
