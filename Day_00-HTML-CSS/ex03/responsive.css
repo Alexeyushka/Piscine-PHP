@@ -1,0 +1,82 @@
+h1 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 4vw;
+}
+table {
+    width: 4vw;
+    height: 4.5vw;
+    font-family: Arial;
+    margin-left: auto;
+    margin-right: auto;
+}
+tr {
+    width: 4vw;
+    height: 4.5vw;
+    font-size: 3vw;
+}
+td {
+    border: 1px solid black;
+    font-size: 0.8vw;
+    width: 5,26%;
+    height: 9,11%;
+}
+th {
+    width: 1vw;
+    height: 4.5vw;
+    font-size: 1vw;
+}
+.blank {
+    border: 0px;
+}
+.nonmetal {
+    background: #ccf5ff;
+}
+.noblegas {
+    background: #ffb3b3;
+}
+.alkaline {
+    background: #ffe0b3;
+}
+.alkali {
+    background: #ffff99;
+}
+.semimetal {
+    background: #b3e6cc;
+}
+.nonmetal {
+    background: #66b3ff;
+}
+.halogen {
+    background: #cc99ff;
+}
+.basic {
+    background: #a3a3c2;
+}
+.transition {
+    background: #fc838b;
+}
+.lanthanide {
+    background: #83fcec;
+}
+.actinide {
+    background: #ff63e2;
+}
+.unknown {
+    background: #828282;
+}
+.number {
+    text-align: left;
+    margin-left: 2px;
+    font-size: 1vw;
+}
+.weight {
+    text-align: right;
+    font-size: 1vw;
+}
+.ename {
+    text-align: center;
+    font-size: 2vw;
+    font-weight: bold;
+}
