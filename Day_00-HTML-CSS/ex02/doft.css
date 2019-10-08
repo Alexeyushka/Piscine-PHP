@@ -14,12 +14,15 @@ body {
     background-color: #909090;
     display: inline-block;
     position: relative;
+    border-radius: 10px;
+    box-shadow: 10px 10px 12px 2px rgba(0,0,0,0.75);
 }
 
 .top_image {
     height: 116px;
     margin-top: 10px;
     margin-bottom: 10px;
+    margin-left: 10px;
     position: absolute;
 }
 
@@ -27,31 +30,160 @@ body {
     width: 251px;
     height: 140px;
     margin-top: 15px;
-    margin-left: 1150px;
+    margin-left: 1140px;
+}
+
+.reload {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+}
+
+.close {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 20px;
+}
+
+.book {
+    width: 57px;
+    height: 86px;
+    top: 20px;
+    right: 40px;
+    position: absolute;
+}
+
+.towel {
+    width: 52px;
+    height: 40px;
+    top: 130px;
+    right: 45px;
+    position: absolute;
+}
+
+.brick {
+    background-image: url('resources/brick.jpg');
+    width: 100%;
+    height: 70px;
+    width: 120px;
+    height: 70px;
+    margin-top: 180px;
+    margin-left: 10px;
+}
+
+.arrow {
+    width: 63px;
+    height: 67px;
+    margin-left: 40px;
+    margin-top: 18px;
+}
+
+.main {
+    width: 65px;
+    height: 68px;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+.oeil {
+    width: 65px;
+    height: 65px;
+    margin-left: 37px;
+    margin-top: 3px;
+    border: solid red 5px;
+    border-radius: 5px;
+}
+
+.outil {
+    width: 60px;
+    height: 60px;
+    margin-left: 40px;
+    margin-top: 5px;
+}
+
+.chat {
+    width: 67px;
+    height: 69px;
+    margin-left: 35px;
+    margin-top: 10px;
+}
+.container {
+    width: 1360px;
+    height: 580px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.link-chair {
+    width: 10%;
+    height: 10%;
+    position: absolute;
+    top: 60%;
+    right: 52%;
+}
+
+.link-screen {
+    width: 20%;
+    height: 20%;
+    position: absolute;
+    top: 57%;
+    right: 3%;
 }
 
 .left_menu {
+    float: left;
     width: 140px;
-    height: 265px;
-    margin-left: 265px;
+    height: 425px;
     background-color: #909090;
-    display: inline-block;
-    position: relative;
+    position: absolute;
+    border-radius: 10px;
+    box-shadow: 10px 10px 12px 2px rgba(0,0,0,0.75);
 }
 
-.center_image {
+.center_menu {
+    margin-left: 170px;
     width: 1000px;
-    height: 560px;
-    margin-left: 180px;
-    display: inline-block;
-    position: relative;
+    position: absolute;
+    border-radius: 10px;
+    box-shadow: 10px 10px 12px 2px rgba(0,0,0,0.75);
+    border: 10px solid #909090;
 }
 
 .right_menu {
     width: 140px;
-    height: 265px;
-    margin-left: 1080px;
+    height: 425px;
     background-color: #909090;
-    display: inline-block;
-    position: relative;
+    margin-left: 1220px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 12px 2px rgba(0,0,0,0.75);
+    position: absolute;
+}
+
+.window {
+    background-color: rgb(134,255,152);
+    width: 520px;
+    height: 170px;
+    padding: 20px 10px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 12px 2px rgba(0,0,0,0.75);
+    position: absolute;
+    font-style: courier;
+    top: 680px;
+    left: 190px;
+}
+
+.bold {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.window span {
+    font-size: 1.2em;
+}
+
+.window input {
+    width: 380px;
 }
