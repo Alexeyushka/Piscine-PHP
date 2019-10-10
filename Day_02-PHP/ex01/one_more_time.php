@@ -1,6 +1,5 @@
 #!/usr/bin/php
 <?php
-
     if ($argc == 2)
     {
         $weekday_check = 0;
@@ -126,7 +125,7 @@
                 $olddate = strtotime("1970-01-01 00:00:00");
                 $newdate = strtotime($temp);
                 $res = $newdate - $olddate;
-                echo $res;
+                echo $res."\n";
             }
             else
                 echo "Wrong Format\n";
