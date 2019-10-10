@@ -1,27 +1,134 @@
 #!/usr/bin/php
 <?php
 
-    // $keys = array(
-    //     'Y' => array('year', '\d{4}'),              //Année sur 4 chiffres
-    //     'y' => array('year', '\d{2}'),              //Année sur 2 chiffres
-    //     'm' => array('month', '\d{2}'),             //Mois au format numérique, avec zéros initiaux
-    //     'n' => array('month', '\d{1,2}'),           //Mois sans les zéros initiaux
-    //     'M' => array('month', '[A-Z][a-z]{3}'),     //Mois, en trois lettres, en anglais
-    //     'F' => array('month', '[A-Z][a-z]{2,8}'),   //Mois, textuel, version longue; en anglais, comme January ou December
-    //     'd' => array('day', '\d{2}'),               //Jour du mois, sur deux chiffres (avec un zéro initial)
-    //     'j' => array('day', '\d{1,2}'),             //Jour du mois sans les zéros initiaux
-    //     'D' => array('day', '[A-Z][a-z]{2}'),       //Jour de la semaine, en trois lettres (et en anglais)
-    //     'l' => array('day', '[A-Z][a-z]{6,9}'),     //Jour de la semaine, textuel, version longue, en anglais
-    //     'u' => array('hour', '\d{1,6}'),            //Microsecondes
-    //     'h' => array('hour', '\d{2}'),              //Heure, au format 12h, avec les zéros initiaux
-    //     'H' => array('hour', '\d{2}'),              //Heure, au format 24h, avec les zéros initiaux
-    //     'g' => array('hour', '\d{1,2}'),            //Heure, au format 12h, sans les zéros initiaux
-    //     'G' => array('hour', '\d{1,2}'),            //Heure, au format 24h, sans les zéros initiaux
-    //     'i' => array('minute', '\d{2}'),            //Minutes avec les zéros initiaux
-    //     's' => array('second', '\d{2}')             //Secondes, avec zéros initiaux
+    if ($argc == 2)
+    {
+        $weekday_check = 0;
+        $month_check = 0;
+        $date_check = 0;
 
-        $format = "12 November 2019 13:12:11";
-        print_r(date_parse_from_format("j M Y H:i:s", $format));
-        
+        $format = $argv[1];
+        $date = (date_parse_from_format("j M Y H:i:s", $format));
+        $i = 0;
+        while ($format[$i] != " ")
+        {    
+            $weekday[$i] = $format[$i];
+            $i++;
+        }
+        $str = implode("", $weekday);
+        if ($str == "Lundi" || $str == "lundi")
+            $weekday_check = 1;
+        else if ($str == "Mardi" || $str == "mardi")
+            $weekday_check = 1;
+        else if ($str == "Mercredi" || $str == "mercredi")
+            $weekday_check = 1;
+        else if ($str == "Jeudi" || $str == "jeudi")
+            $weekday_check = 1;
+        else if ($str == "Vendredi" || $str == "vendredi")
+            $weekday_check = 1;
+        else if ($str == "Samedi" || $str == "samedi")
+            $weekday_check = 1;
+        else if ($str == "Dimanche" || $str == "dimanche")
+            $weekday_check = 1;
+        else
+        {   
+            echo "Wrong Format\n";
+            exit(-1);
+        }
+        $i++;
+        if ($weekday_check == 1)
+        {
+            while ($format[$i] != " ")
+                $i++;
+        }
+        $i++;
+        while ($format[$i] != " ")
+        {
+            $monthname[$i] = $format[$i];
+            $i++;
+        }
+        $month = implode("", $monthname);
+        if ($month == "Janvier" || $month == "janvier")
+        {
+            $date[month] = 1;
+            $month_check = 1;
+        }
+        else if ($month == "Fevrier" || $month == "fevrier")
+        {
+            $date[month] = 2;
+            $month_check = 1;
+        }
+        else if ($month == "Mars" || $month == "mars")
+        {
+            $date[month] = 3;
+            $month_check = 1;
+        }
+        else if ($month == "Avril" || $month == "avril")
+        {
+            $date[month] = 4;
+            $month_check = 1;
+        }
+        else if ($month == "Mai" || $month == "mai")
+        {
+            $date[month] = 5;
+            $month_check = 1;
+        }
+        else if ($month == "Juin" || $month == "juin")
+        {
+            $date[month] = 6;
+            $month_check = 1;
+        }
+        else if ($month == "Juillet" || $month == "juillet")
+        {
+            $date[month] = 7;
+            $month_check = 1;
+        }
+        else if ($month == "Aout" || $month == "aout")
+        {
+            $date[month] = 8;
+            $month_check = 1;
+        }
+        else if ($month == "Septembre" || $month == "septembre")
+        {
+            $date[month] = 9;
+            $month_check = 1;
+        }
+        else if ($month == "Octobre" || $month == "octobre")
+        {
+            $date[month] = 10;
+            $month_check = 1;
+        }
+        else if ($month == "Novembre" || $month == "novembre")
+        {
+            $date[month] = 11;
+            $month_check = 1;
+        }
+        else if ($month == "Decembre" || $month == "decembre")
+        {
+            $date[month] = 12;
+            $month_check = 1;
+        }
+        else
+        {   
+            echo "Wrong Format\n";
+            exit(-1);
+        }
 
+        if ($month_check == 1 && $weekday_check == 1)
+            if (preg_match("/^(([0-3]){1}([0-9]){1}|([1-9]){1})$/", $date[day]) && $date[day] > 0 && $date[day] <= 31 &&
+                preg_match("/^([0-9]){4}$/", $date[year]) && $date[year] >= 1970 && $date[year] < 9999 && 
+                preg_match("/^([0-9]){2}|([0-9]){1}$/", $date[minute]) && $date[minute] >= 0 && $date[minute] < 60 &&
+                preg_match("/^([0-9]){2}|([0-9]){1}$/", $date[hour]) && $date[hour] >= 0 && $date[hour] < 24 &&
+                preg_match("/^([0-9]){2}|([0-9]){1}$/", $date[second]) && $date[second] >= 0 && $date[second] < 60)
+            {
+                date_default_timezone_set('Europe/Moscow'); 
+                $temp = "$date[year]-$date[month]-$date[day] $date[hour]:$date[minute]:$date[second]";
+                $olddate = strtotime("1970-01-01 00:00:00");
+                $newdate = strtotime($temp);
+                $res = $newdate - $olddate;
+                echo $res;
+            }
+            else
+                echo "Wrong Format\n";
+    }
 ?>
