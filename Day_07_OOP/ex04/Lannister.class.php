@@ -2,7 +2,7 @@
 
     class Lannister 
     {   
-        public function sllepWith($person)
+        public function sleepWith($person)
         {}
     }
 
